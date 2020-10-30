@@ -7,7 +7,7 @@ import torch.nn.functional as F
 class DAIN_Layer(nn.Module):
     def __init__(self, mode='adaptive_avg', mean_lr=0.00001, gate_lr=0.001, scale_lr=0.00001, input_dim=144):
         super(DAIN_Layer, self).__init__()
-        assert self.mode in [None, 'avg', 'adaptive_avg', 'adaptive_scale', 'full'], f'Unsupported mode: {mode}!'\
+        assert mode in [None, 'avg', 'adaptive_avg', 'adaptive_scale', 'full'], f'Unsupported mode: {mode}!'\
                 'Use one of: None, "avg", "adaptive_avg", "adaptive_scale", "full". '
         print("Mode = ", mode)
 
